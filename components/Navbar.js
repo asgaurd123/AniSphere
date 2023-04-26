@@ -34,7 +34,7 @@ const navStyle = StyleSheet.create({
         alignItems: 'center',
         alignContent: 'center',
         backgroundColor: 'pink',
-        height: 50,
+        height: 88,
 
     },
     margin: {
