@@ -1,58 +1,48 @@
 import React, { useState } from 'react'
-import { StyleSheet, Dimensions, Pressable } from 'react-native'
-import { MdMenu } from 'react-icons/md'
-import { IoLogoIonic } from 'react-icons/io'
-import { AiFillCloseCircle } from 'react-icons/ai'
+import { StyleSheet, Dimensions, Pressable, View, Text, Image } from 'react-native'
 
 const Navbar = () => {
     const [menu, setMenu] = useState('none')
     return (
-        <div style={navStyle.container}>
-            <IoLogoIonic style={navStyle.margin} />
-            <Pressable style={navStyle.margin} onPress={() => { setMenu('flex') }} >
-                <MdMenu />
-                <div style={{ display: menu }}>
-                    <div style={navStyle.background} >
-                        <Pressable style={navStyle.margin} onPress={() => { setMenu('none') }} >
-                            <AiFillCloseCircle style={{ position: 'relative', left: '0px' }} />
-                        </Pressable>
-                        <li style={{ marginLeft: 10, marginTop: 18 }}>Home</li>
-                        <li style={{ marginLeft: 10, marginTop: 9 }}>About</li>
-                    </div>
-                </div >
-            </Pressable >
+        <View style={navStyle.container}>
+            <Image source={require('../assets/icon1.png')} style={navStyle.logo} />
+            <View style={navStyle.search}></View>
+            <Text>Hi</Text>
 
-        </div >
+        </View >
     )
 }
 
 const navStyle = StyleSheet.create({
     container: {
         width: Dimensions.get('window').width,
+        color: 'white',
+        flexDirection: 'row',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
         alignContent: 'center',
-        backgroundColor: 'pink',
+        backgroundColor: '#2b2e4afa',
         height: 88,
+        marginBottom: 40,
 
     },
     margin: {
         margin: '10px'
     },
-    background: {
-        backgroundColor: 'blue',
-        color: 'white',
-        position: 'fixed',
-        top: '1.3rem',
-        width: 141,
-        height: Dimensions.get('window').height,
-        right: 1,
+
+    search: {
+        backgroundColor: "#151623",
+        width: '55%',
+        height: '45%'
+
 
     },
-    none: {
-        display: 'none'
+    logo: {
+        width: 30,
+        height: 30,
     }
+
 
 
 
