@@ -11,14 +11,6 @@ Javascript, HTML, CSS, React-Native
 # Hi, I'm Lohith 👋
 I'm an aspiring devloper on my first serious project im also an anime fan so i have decided to make a social media app similar to instagram for anime lovers.Hope you support me throught the process.
 
-
-## Features
-
-- Light/dark mode toggle
-- Fullscreen mode
-- Cross platform
-
-
 ## Features
 
 - Light/dark mode toggle
